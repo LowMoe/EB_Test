@@ -135,6 +135,9 @@ function contentSlider(jsonObj) {
                 rightAr.css('visibility', 'visible');
                 titleSlide.text(titleToDisplay);
                 paraSlide.text(paraToDisplay);
+                rightBtn.css('color', 'grey');
+                leftBtn.css('color', 'grey');
+                midBtn.css('color', 'black');
                 for (let i = 0; i < starsToDisplay; i++) {
                     starsSlide.append("*");
                 }
