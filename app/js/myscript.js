@@ -25,7 +25,6 @@ requestAPI.onload = function () {
 // Fonction pour l'image de fond du slider
 function bgSlider(jsonObj) {
     var setMovie = 0;
-    console.log(requestAPI);
     var bgSlide = $('#slider');
     var pictToDisplay = jsonObj.results[setMovie].poster_path;
     bgSlide.css("background", `url(https://image.tmdb.org/t/p/w500/${pictToDisplay}) no-repeat`);
@@ -54,14 +53,11 @@ function bgSlider(jsonObj) {
         }
 
         if (setMovie >= clickMin) {
-            console.log(setMovie)
-            console.log(clickMin)
+
             leftAr.click(function () {
-                console.log(setMovie)
-                console.log(clickMin)
+
                 setMovie--;
-                console.log(setMovie)
-                console.log(clickMin)
+
                 var pictToDisplay = jsonObj.results[setMovie].poster_path;
                 bgSlide.css("background", `url(https://image.tmdb.org/t/p/w500/${pictToDisplay}) no-repeat`);
                 leftAr.css('visibility', 'visible');
@@ -157,3 +153,4 @@ function contentSlider(jsonObj) {
 
 
     })
+}
